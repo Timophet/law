@@ -26,31 +26,23 @@
 			   <a class="navbar-brand" href="#"><img src="image\logo-min.png" height="40"></a>
 			
 			</div>
-			<div class="nav navbar-nav navbar-right">
-				<form class="navbar-form ">
-					<div class="form-group">
-						<label> 
-							<div class="alert alert-warning" role="alert">
-							Нет подписки 
-							<a href="#" class="alert-link">Купить подписку</a>
-							</div>
-						</label>
-						<label>
-							<div class="alert alert-warning" role="alert">
-								<a href="#" class="alert-link">Профиль</a>
-							</div>
+						
+			<div class="col-md-offset-7 col-md-4">
+				
+					<div class="btn-group" role="group" aria-label="...">
+							<button type="button" class="btn btn-warning">Купить подписку</button>
+							<button type="button" class="btn btn-default">Профиль</button>
+							<button type="button" class="btn btn-default">Выйти</button>
 							
-						</label>	
-						<label>
-							<div class="alert alert-warning" role="alert">
-								<a href="#" class="alert-link">Выйти</a>
-							</div>							
-						</label>												
 					</div>
+					 <form class="navbar-form navbar-left">
+						<div class="form-group">
+						  <a href="#">Задать вопрос </a>
+						</div>
+						<span> 8-800-000-00-01</span>
+					  </form>
 					
-				</form>
 			</div>
-			
 			
 			
 		  </div><!-- /.container-fluid -->
