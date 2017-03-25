@@ -18,7 +18,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<link href="css/style.css" rel="stylesheet">
-
+	<link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
 </head>
 <body>
 	<header>
@@ -68,12 +68,14 @@
 	
 	<div class="container">
 		<ul class="nav nav-tabs nav-justified">
-	  	<li role="presentation" class="active"><a data-toggle="tab" href="#panel1">Органы управления</a></li>
-	  	<li role="presentation"><a data-toggle="tab" href="#panel2">Внешние риски</a></li>
-	  	<li role="presentation"><a data-toggle="tab" href="#panel3">Внутренние риски</a></li>
+	  		<li role="presentation" class="active"><a data-toggle="tab" href="#panel1">Органы управления</a></li>
+	  		<li role="presentation"><a data-toggle="tab" href="#panel2">Внешние риски</a></li>
+	  		<li role="presentation"><a data-toggle="tab" href="#panel3">Внутренние риски</a></li>
+			
 		</ul>	
 	</div>
 	<div class="container">
+		
 		<div class="tab-content">
 	  		<div id="panel1" class="tab-pane fade in active">
 	    		<h3>Общее собрание участников</h3>
@@ -93,6 +95,7 @@
 		    	<h3>Работники организации</h3>
 		    	
 		  	</div>
+		  	
 		  	
 		</div>
 	</div>
