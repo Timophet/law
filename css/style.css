@@ -1,7 +1,8 @@
 
 .navbar-second
 {
-	margin-top: -40px;
+	margin-top: -60px;
+	margin-bottom: 0px;
 	color: black;	
 }
 .navbar-main
@@ -17,4 +18,66 @@
 .navbar-main 
 {
 	color:black;
+}
+
+.navbar-main-page
+{
+	margin-bottom: 0px;
+}
+
+.gray-back
+{
+	background-color: gray;
+}
+a.modal-link:focus
+{
+	outline:red ;
+}
+.modal-login
+{
+	margin-top: 100px;
+}
+.modal-login .row
+{
+	margin-bottom:-20px;
+	padding-bottom:20px;
+	
+}
+.modal-grey
+{
+	border-radius:6px;
+	margin-top:-15px;
+	margin-bottom:-20px;
+	background-color: rgba(239,237,238,1);
+	//color:red;
+}
+.modal-grey h4
+{
+	padding-top:15px;
+}
+.modal-grey form
+{
+	margin-bottom:15px;
+}
+
+.modal-body h4, p
+{
+	margin-bottom:20px;
+}
+
+.modal-body p
+{
+	margin-bottom:30px;
+}
+
+.modal-white form
+{
+	padding-bottom:57px;
+	
+}
+
+.modal-white
+{
+	margin-bottom:20px;
+	
 }
