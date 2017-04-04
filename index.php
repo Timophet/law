@@ -6,29 +6,82 @@
 	<title>Leader Assistance</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+	<script src="jquery/jquery-3.2.0.min.js"></script>
+	
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
 
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 
 	<link href="css/style.css" rel="stylesheet">
+	
+	<script src="js/modal.js"></script>
 	<link rel="shortcut icon" href="image\favicon.ico" type="image/x-icon">
 </head>
 <body>
+	<!-- Modal -->
+	<section class="container login-modal-window" id="card-container">
+  		<div id="card">
+    		
+    		<figure class="login-form">
+				<div class="row inner-container">
+					<div class="col-md-7 modal-white">
+						<h4> Вход в личный кабинет </h4>						
+						<form class="form-group">
+							<input type="email" class="form-control" placeholder="Введите email">
+						</form>
+						<button type="button" class="btn btn-success">Войти в личный кабинет</button>
+					</div>
+					<div class="col-md-5 modal-grey">
+						<h4> Регистрация </h4>
+						<p> Если вы здесь впервые, создайте личный кабинет для начала работы</p>
+						<form>
+							<button type="button" class="btn btn-default" id="signin-button">Создать кабинет</button>
+						</form>
+					</div>
+				</div>				
+			</figure>
+			<figure class="signin-form">
+            	<div class="row inner-container">
+					<div class="col-md-7 modal-white">
+						<h4> Регистрация </h4>
+						<p> На указанный email Вам придет пароль от Личного кабинета </p>						
+						<form class="form-group">
+							<input type="email" class="form-control" placeholder="Введите email">
+												
+						</form>
+						<button type="button" class="btn btn-success">Создать кабинет</button>
+					</div>
+					<div class="col-md-5 modal-grey">
+						<h4>Войти в личный кабинет </h4>
+						<p>Если вы зарегистрированы, войдите в личный кабинет для начала работы.</p>
+						<form>
+							<button type="button" class="btn btn-default" id="login-button">Войти</button>
+						</form>
+					</div>
+				</div>	
+			</figure>
+                    
+    			
+  		</div>
+	</section>
+	<div class="bg-window" id="bg-window">
+	</div>
+
+
+
 	<header>
 		
 			<nav class="navbar navbar-static-top">
 			  <div class="container">
 				<div class="navbar-right form-group" role="group">
 					
-						<a class="modal-link"  href="#" data-toggle="modal" data-target="#myModal" >Вход в личный кабинет</a>
-						<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal" ">Регистрация</button>
+						<a class="modal-link"  href="#" id="navbar-link-login" >Вход в личный кабинет</a>
+						<button type="button" class="btn btn-default navbar-btn" id="navbar-link-signin">Регистрация</button>
 					
 				</div>
 				
@@ -129,44 +182,70 @@
 		  </div>
 		  
 		  
-		  <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">Начать работу</a></p>
+		  <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button" id="start-work-button">Начать работу</a></p>
 		</div>
 	
 	</div>
 	
 	
-	<!-- Modal -->
-	<div class="modal fade modal-login" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
-		<div class="modal-content">
-		  <div class="modal-body">
-			<div class="row">
-				<div class="col-md-7 modal-white">
-					<h4> Вход в личный кабинет </h4>						
-					<form class="form-group">
-						<input type="email" class="form-control" placeholder="Введите email">
-											
-					</form>
-					<button type="button" class="btn btn-success">Войти в личный кабинет</button>
-				
-				</div>
-				<div class="col-md-5 modal-grey">
-					<h4> Регистрация </h4>
-					<p> Если вы здесь впервые, создайте личный кабинет для начала работы
-					</p>
-					<form>
-						<button type="button" class="btn btn-default">Создать кабинет</button>
-					</form>
-				</div>
-			</div>
-			
-			
-		  </div>
-		</div>
-		
-	  </div>
-	</div>
+	
+	<SCRIPT>
+		var card = document.getElementById('card'); 
+		var card_container = document.getElementById('card-container');
+		var bg_window = document.getElementById('bg-window');
+		console.log(card_container); 
+			//console.log(document.getElementById('login'));
 
+  		document.getElementById('navbar-link-login').addEventListener( 'click', function(){
+			card_container.style.display = "block";
+			bg_window.style.display = "block";
+
+			//card.classList.toggle("flipping");
+  		}, false);
+
+  		document.getElementById('navbar-link-signin').addEventListener( 'click', function(){
+			card_container.style.display = "block";
+			bg_window.style.display = "block";
+
+			if(!card.classList.contains("flipping"))
+				card.classList.add("flipping");
+  		}, false);
+			
+  		document.getElementById('signin-button').addEventListener( 'click', function(){
+			card.classList.toggle("flipping");
+  		}, false);
+
+		document.getElementById('login-button').addEventListener( 'click', function(){
+			card.classList.toggle("flipping");
+  		}, false);  
+  		bg_window.addEventListener( 'click', function(){
+				///console.log(card);    				
+				card_container.style.display = "none";
+				bg_window.style.display = "none";
+		}, false);			
+
+			/*
+			document.getElementById('signin').addEventListener( 'click', function(){
+				card_container.style.display = "block";
+				bg_window.style.display = "block";
+
+				card.classList.toggle("flipping");
+  			}, false);
+
+			document.getElementById('signin-button').addEventListener( 'click', function(){
+				console.log(card);    				
+				
+				card.classList.toggle("flipping");
+  			}, false);
+			document.getElementById('login-button').addEventListener( 'click', function(){
+				console.log(card);    				
+				
+				card.classList.toggle("flipping");
+  			}, false);
+			
+			*/
+	
+	</SCRIPT>
 
 </body>
 </html>
