@@ -24,89 +24,90 @@
 </head>
 <body>
 	<!-- Modal -->
-	<section class="container login-modal-window" id="card-container">
-  		<div id="card">
-    		
-    		<figure class="login-form">
-				<div class="row inner-container">
-					<div class="col-md-7 modal-white">
-						<h4> Вход в личный кабинет </h4>						
-						<form class="form-group">
-							<input type="email" class="form-control" placeholder="Введите email">
-						</form>
-						<button type="button" class="btn btn-success">Войти в личный кабинет</button>
-					</div>
-					<div class="col-md-5 modal-grey">
-						<h4> Регистрация </h4>
-						<p> Если вы здесь впервые, создайте личный кабинет для начала работы</p>
-						<form>
-							<button type="button" class="btn btn-default" id="signin-button">Создать кабинет</button>
-						</form>
-					</div>
-				</div>				
-			</figure>
-			<figure class="signin-form">
-            	<div class="row inner-container">
-					<div class="col-md-7 modal-white">
-						<h4> Регистрация </h4>
-						<p> На указанный email Вам придет пароль от Личного кабинета </p>						
-						<form class="form-group">
-							<input type="email" class="form-control" placeholder="Введите email">
-												
-						</form>
-						<button type="button" class="btn btn-success">Создать кабинет</button>
-					</div>
-					<div class="col-md-5 modal-grey">
-						<h4>Войти в личный кабинет </h4>
-						<p>Если вы зарегистрированы, войдите в личный кабинет для начала работы.</p>
-						<form>
-							<button type="button" class="btn btn-default" id="login-button">Войти</button>
-						</form>
-					</div>
-				</div>	
-			</figure>
-                    
-    			
-  		</div>
-	</section>
 	<div class="bg-window" id="bg-window">
+		<section class="container login-modal-window" id="card-container" onClick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;">
+  			<div id="card">
+    		
+	    		<figure class="login-form">
+					<div class="row inner-container">
+						<div class="col-md-7 modal-white">
+							<h4> Вход в личный кабинет </h4>						
+							<form class="form-group">
+								<input type="email" class="form-control" placeholder="Введите email">
+							</form>
+							<button type="button" class="btn btn-success">Войти в личный кабинет</button>
+						</div>
+						<div class="col-md-5 modal-grey">
+							<h4> Регистрация </h4>
+							<p> Если вы здесь впервые, создайте личный кабинет для начала работы</p>
+							<form>
+								<button type="button" class="btn btn-default" id="signin-button">Создать кабинет</button>
+							</form>
+						</div>
+					</div>				
+				</figure>
+				<figure class="signin-form">
+	            	<div class="row inner-container">
+						<div class="col-md-7 modal-white">
+							<h4> Регистрация </h4>
+							<p> На указанный email Вам придет пароль от Личного кабинета </p>						
+							<form class="form-group">
+								<input type="email" class="form-control" placeholder="Введите email">
+								<label class="checkbox small">
+									<input type="checkbox" checked="checked">
+									<span>Принимаю условия <a href="#"> лицензионного соглашения</a> </span>
+									
+								</label>					
+							</form>
+							<button type="button" class="btn btn-success">Создать кабинет</button>
+						</div>
+						<div class="col-md-5 modal-grey">
+							<h4>Вход в личный кабинет </h4>
+							<p>Если вы зарегистрированы, войдите в личный кабинет для начала работы.</p>
+							<form>
+								<button type="button" class="btn btn-default" id="login-button">Войти в кабинет</button>
+							</form>
+						</div>
+					</div>	
+				</figure>
+	                    
+	    			
+	  		</div>
+		</section>
+	
 	</div>
 
 
 
-	<header>
+	<header class="header-main-page">
 		
-			<nav class="navbar navbar-static-top">
+
+			<nav class="navbar navbar-fixed-top top-navbar">
 			  <div class="container">
-				<div class="navbar-right form-group" role="group">
-					
-						<a class="modal-link"  href="#" id="navbar-link-login" >Вход в личный кабинет</a>
-						<button type="button" class="btn btn-default navbar-btn" id="navbar-link-signin">Регистрация</button>
-					
-				</div>
 				
-				<div class="navbar-header">
+			  	<div class="navbar-header">
 				   <a class="navbar-brand" href="#"><img src="image\logo-min.png" height="30">
 					<p> <strong> AsLeader </strong> </p>
 				   </a>
 				</div>
+
+				<div class="navbar-right form-group" role="group">
+					
+					<a class="modal-link"  href="#" id="navbar-link-login" >Вход в личный кабинет</a>
+					<button type="button" class="btn btn-default navbar-btn" id="navbar-link-signin">Регистрация</button>
+					<h4> <a href="#">Задать вопрос</a>
+							<span> 8-800-000-00-01 </span>
+					</h4>
+		 
+					
+				</div>
+				
+				
 					
 
 			  </div><!-- /.container-fluid -->
 			</nav>
-			<div class="clearfix">...</div>
-			<nav class="navbar navbar-second ">
-			  <div class="container">
-				<form class="navbar navbar-form navbar-right">
-					<div class="form-group">
-						<h4> <a href="#">Задать вопрос</a>
-						<span> 8-800-000-00-01 </span>
-						</h4>
-					</div>
-					
-				</form> 
-			</div>
-			</nav>
+			
 		
 	<nav class="navbar navbar-inverse navbar-main-page">
 		<div class="container">
@@ -117,7 +118,13 @@
 				<li><a href="#">Отзывы</a></li>
 				<li><a href="#">Контакты</a></li>				
 			</ul>
-				
+			<form class="navbar-form navbar-right">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Поиск"> 
+		          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        </div>
+		        
+		     </form>	
 			
 		</div>
 	</nav>
@@ -126,6 +133,9 @@
 
 	</header>
 	
+	
+
+	<div class="clearfix"> </div>
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	  <!-- Indicators -->
 	  <ol class="carousel-indicators">
@@ -199,7 +209,8 @@
   		document.getElementById('navbar-link-login').addEventListener( 'click', function(){
 			card_container.style.display = "block";
 			bg_window.style.display = "block";
-
+			if(card.classList.contains("flipping"))
+				card.classList.remove("flipping");
 			//card.classList.toggle("flipping");
   		}, false);
 

@@ -1,19 +1,30 @@
 .login-modal-window{
    z-index: 101;
-  position: absolute;
+  position: relative;
   top: 10%;
-  margin: 0 20%;
+  margin: 0 auto;
   display:none;
   //background-color: gray;
-  width: 600px;
-  height: 260px;
+  width: 620px;
+  height: 240px;
   padding: 0;
-  border: 1px solid #CCC;
+  //border: 1px solid #CCC;
      -webkit-perspective: 800px;
         -moz-perspective: 800px;
           -o-perspective: 800px;
              perspective: 800px;
 }
+
+.login-modal-window h4
+{
+	font-size: 15px;
+	font-weight: bold;
+}
+.login-modal-window p
+{
+	font-size: 13px;
+}
+
 #card {
   width: 100%;
   height: 100%;
@@ -80,6 +91,7 @@
 
 .bg-window
 {
+	overflow: hidden;
 	position: absolute;
  	top:0;
 	width:100%;
@@ -91,13 +103,98 @@
 		
 }
 
-
-.navbar-second
+.inner-container
 {
-	margin-top: -60px;
-	margin-bottom: 0px;
-	color: black;	
+	margin:0;
+	height: 100%;
+	width:100%;
 }
+
+.modal-white, .modal-grey
+{
+	padding: 20px 40px;
+	text-align: left;
+	height: 100%;
+}
+
+
+.login-form .modal-white h4, .login-form .modal-grey h4
+{
+	padding-bottom: 20px;
+
+}
+
+.modal-grey
+{
+	background: linear-gradient(to bottom,rgba(255,255,255,1) 0%,rgba(239,237,238,1) 100%);
+}
+
+.login-form .modal-white .form-group
+{
+	padding-bottom: 50px;
+}
+
+.login-form .modal-grey p
+{
+	margin-bottom: 43px;
+}
+
+.login-form .modal-grey #signin-button
+{
+	//margin-bottom: 12px;
+}
+
+
+.signin-form .modal-white form label
+{
+	margin-top: 4px; 
+
+	
+}
+
+.signin-form .modal-white form input[type="checkbox"]
+{
+	position: relative;
+	margin-left: 0; 
+
+	//color:red;
+}
+
+.signin-form .modal-white form  span
+{
+	font-size: 92%;
+	//margin-left: 10px; 
+	//color:red;
+}
+
+.signin-form .modal-grey p
+{
+	
+	margin-top: 15px;
+	margin-bottom: 58px; 
+	//color:red;
+}
+
+.signin-form .modal-grey #login-button
+{
+	//margin-bottom: 12px;
+}
+
+.header-main-page
+{
+	margin-bottom: 100px;
+}
+.top-navbar
+{
+	z-index: 99;
+	//position: fixed;
+	//top:0;
+	//width:100%;
+	background: white;
+	border-bottom: 1px solid #ccc;
+}
+
+
 .navbar-main
 {
 	background: #f5f6f6; /* Old browsers */
@@ -115,88 +212,10 @@
 
 .navbar-main-page
 {
+	position: relative;
+	top:100px;
+	left:0;
 	margin-bottom: 0px;
+	float: none;
 }
 
-.gray-back
-{
-	background-color: gray;
-}
-a.modal-link:focus
-{
-	outline:red ;
-}
-#login-modal, #signin-modal 
-{
-	margin-top: 100px;
-}
-
-#login-modal .modal-body, #signin-modal .modal-body
-{
-	padding: 0px;
-}
-
-#login-modal .modal-content, #signin-modal .modal-content
-{
-	border-radius:0px;
-}
-#login-modal .row, #signin-modal .row
-{
-	padding: 0px;
-	margin: 0px;
-	border-radius:0px;
-	//margin-bottom:-20px;
-	//padding-bottom:20px;
-	
-}
-#login-modal .modal-white, #signin-modal .modal-white 
-{
-	padding-top:30px;
-	padding-bottom: 30px;
-	
-}
-
-#login-modal .modal-white h4, #login-modal .modal-white .form-group 
-{
-	margin-bottom: 38px;
-	
-}
-
-#login-modal .modal-grey, #signin-modal .modal-grey
-{
-	padding-top:30px;
-	padding-bottom: 30px;
-	background-color: rgba(239,237,238,1);
-	
-}
-
-
-#login-modal .modal-grey h4, #login-modal .modal-grey p 
-{
-	padding-bottom: 25px;
-	margin-bottom: 0px;
-}
-
-#login-modal .modal-grey form
-{
-	//margin-bottom:15px;
-}
-
-
-#signin-modal .modal-white h4, #signin-modal .modal-white p 
-{
-	margin-bottom: 10px;
-	
-}
-
-#signin-modal .modal-grey h4  
-{
-	margin-bottom: 10px;
-	
-}
-
-#signin-modal .modal-grey p
-{
-	margin-bottom: 38px;
-	
-}
