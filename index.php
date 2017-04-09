@@ -7,6 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<script src="jquery/jquery-3.2.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+	
+	
+
 	
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -18,8 +23,6 @@
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 
 	<link href="css/style.css" rel="stylesheet">
-	
-	<script src="js/modal.js"></script>
 	<link rel="shortcut icon" href="image\favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -28,42 +31,43 @@
 		<section class="container login-modal-window" id="card-container" onClick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;">
   			<div id="card">
     		
-	    		<figure class="login-form">
+	    		<figure class="login-figure">
 					<div class="row inner-container">
-						<div class="col-md-7 modal-white">
+						<div class="col-md-8 modal-white">
 							<h4> Вход в личный кабинет </h4>						
-							<form class="form-group">
-								<input type="email" class="form-control" placeholder="Введите email">
+							<form class="form-group" id="login-form" action="logged.php" method="post">
+								<input type="email" name="email" class="form-control" id="login-email-input" placeholder="Введите email" required>
+								<input type="submit" class="btn btn-success" id="enter-login-button" value = "Войти в личный кабинет">
 							</form>
-							<button type="button" class="btn btn-success">Войти в личный кабинет</button>
+							
 						</div>
-						<div class="col-md-5 modal-grey">
+						<div class="col-md-4 modal-grey">
 							<h4> Регистрация </h4>
-							<p> Если вы здесь впервые, создайте личный кабинет для начала работы</p>
+							<p> Если Вы здесь впервые, создайте личный кабинет для начала работы</p>
 							<form>
 								<button type="button" class="btn btn-default" id="signin-button">Создать кабинет</button>
 							</form>
 						</div>
 					</div>				
 				</figure>
-				<figure class="signin-form">
+				<figure class="signin-figure">
 	            	<div class="row inner-container">
-						<div class="col-md-7 modal-white">
+						<div class="col-md-8 modal-white">
 							<h4> Регистрация </h4>
-							<p> На указанный email Вам придет пароль от Личного кабинета </p>						
-							<form class="form-group">
-								<input type="email" class="form-control" placeholder="Введите email">
+							<p> На указанный email Вам придет пароль от личного кабинета </p>						
+							<form class="form-group" id="signin-form">
+								<input type="email" name="email" class="form-control" placeholder="Введите email" required>
 								<label class="checkbox small">
-									<input type="checkbox" checked="checked">
-									<span>Принимаю условия <a href="#"> лицензионного соглашения</a> </span>
-									
-								</label>					
+									<input type="checkbox" checked="checked" name="checkbox_agreement" required>
+									<span>Принимаю условия <a href="#"> Лицензионного соглашения</a> </span>
+								</label>
+								<input type="submit" class="btn btn-success" id="enter-signin-button" value = "Создать кабинет">					
 							</form>
-							<button type="button" class="btn btn-success">Создать кабинет</button>
+							
 						</div>
-						<div class="col-md-5 modal-grey">
+						<div class="col-md-4 modal-grey">
 							<h4>Вход в личный кабинет </h4>
-							<p>Если вы зарегистрированы, войдите в личный кабинет для начала работы.</p>
+							<p>Если Вы зарегистрированы, войдите в личный кабинет для начала работы.</p>
 							<form>
 								<button type="button" class="btn btn-default" id="login-button">Войти в кабинет</button>
 							</form>
@@ -92,20 +96,13 @@
 				</div>
 
 				<div class="navbar-right form-group" role="group">
-					
 					<a class="modal-link"  href="#" id="navbar-link-login" >Вход в личный кабинет</a>
 					<button type="button" class="btn btn-default navbar-btn" id="navbar-link-signin">Регистрация</button>
 					<h4> <a href="#">Задать вопрос</a>
 							<span> 8-800-000-00-01 </span>
 					</h4>
-		 
-					
 				</div>
-				
-				
-					
-
-			  </div><!-- /.container-fluid -->
+			  </div>
 			</nav>
 			
 		
@@ -198,65 +195,9 @@
 	</div>
 	
 	
-	
-	<SCRIPT>
-		var card = document.getElementById('card'); 
-		var card_container = document.getElementById('card-container');
-		var bg_window = document.getElementById('bg-window');
-		console.log(card_container); 
-			//console.log(document.getElementById('login'));
+	<script src="js/validation.js"></script>
+	<script src="js/main.js"></script>
 
-  		document.getElementById('navbar-link-login').addEventListener( 'click', function(){
-			card_container.style.display = "block";
-			bg_window.style.display = "block";
-			if(card.classList.contains("flipping"))
-				card.classList.remove("flipping");
-			//card.classList.toggle("flipping");
-  		}, false);
-
-  		document.getElementById('navbar-link-signin').addEventListener( 'click', function(){
-			card_container.style.display = "block";
-			bg_window.style.display = "block";
-
-			if(!card.classList.contains("flipping"))
-				card.classList.add("flipping");
-  		}, false);
-			
-  		document.getElementById('signin-button').addEventListener( 'click', function(){
-			card.classList.toggle("flipping");
-  		}, false);
-
-		document.getElementById('login-button').addEventListener( 'click', function(){
-			card.classList.toggle("flipping");
-  		}, false);  
-  		bg_window.addEventListener( 'click', function(){
-				///console.log(card);    				
-				card_container.style.display = "none";
-				bg_window.style.display = "none";
-		}, false);			
-
-			/*
-			document.getElementById('signin').addEventListener( 'click', function(){
-				card_container.style.display = "block";
-				bg_window.style.display = "block";
-
-				card.classList.toggle("flipping");
-  			}, false);
-
-			document.getElementById('signin-button').addEventListener( 'click', function(){
-				console.log(card);    				
-				
-				card.classList.toggle("flipping");
-  			}, false);
-			document.getElementById('login-button').addEventListener( 'click', function(){
-				console.log(card);    				
-				
-				card.classList.toggle("flipping");
-  			}, false);
-			
-			*/
-	
-	</SCRIPT>
 
 </body>
 </html>
