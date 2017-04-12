@@ -7,8 +7,15 @@ $(document).ready(function(){
     {
         debug: true,
         
+        invalidHandler: function (event, validator) {
+            
+            console.log($('#submit-info-text'));
+            $('#submit-info-text').css('visibility', 'hidden'); 
+        },
         submitHandler: function(form) {
-            alert("sfsdfsdf");
+            
+
+            //alert("sfsdfsdf");
             form.submit();
             //$('#login-form').submit();
         },
@@ -21,7 +28,7 @@ $(document).ready(function(){
             },
             checkbox_agreement:
             {
-                required: "Для регистрации необходимо принять условия Лицензионного соглашения"
+                required: "Необходимо принять условия Лицензионного соглашения"
             }
         }
     }; 

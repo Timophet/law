@@ -33,7 +33,7 @@
     		
 	    		<figure class="login-figure">
 					<div class="row inner-container">
-						<div class="col-md-8 modal-white">
+						<div class="col-md-7 modal-white">
 							<h4> Вход в личный кабинет </h4>						
 							<form class="form-group" id="login-form" action="logged.php" method="post">
 								<input type="email" name="email" class="form-control" id="login-email-input" placeholder="Введите email" required>
@@ -41,7 +41,7 @@
 							</form>
 							
 						</div>
-						<div class="col-md-4 modal-grey">
+						<div class="col-md-5 modal-grey">
 							<h4> Регистрация </h4>
 							<p> Если Вы здесь впервые, создайте личный кабинет для начала работы</p>
 							<form>
@@ -52,9 +52,9 @@
 				</figure>
 				<figure class="signin-figure">
 	            	<div class="row inner-container">
-						<div class="col-md-8 modal-white">
+						<div class="col-md-7 modal-white">
 							<h4> Регистрация </h4>
-							<p> На указанный email Вам придет пароль от личного кабинета </p>						
+							<p id="submit-info-text"> На указанный email Вам придет пароль от личного кабинета </p>						
 							<form class="form-group" id="signin-form">
 								<input type="email" name="email" class="form-control" placeholder="Введите email" required>
 								<label class="checkbox small">
@@ -65,7 +65,7 @@
 							</form>
 							
 						</div>
-						<div class="col-md-4 modal-grey">
+						<div class="col-md-5 modal-grey">
 							<h4>Вход в личный кабинет </h4>
 							<p>Если Вы зарегистрированы, войдите в личный кабинет для начала работы.</p>
 							<form>
@@ -115,10 +115,12 @@
 				<li><a href="#">Отзывы</a></li>
 				<li><a href="#">Контакты</a></li>				
 			</ul>
-			<form class="navbar-form navbar-right">
+			<form class="navbar-form navbar-right" id="search-form">
 		        <div class="form-group">
-		          <input type="text" class="form-control" placeholder="Поиск"> 
-		          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		          <label>
+		          	<input type="text" class="form-control" placeholder="Поиск" id="navbar-search" name="search-text"> 
+		          	<span class="clear-search-field" id="navbar-clear-search">х</span>		
+		          </label> 
 		        </div>
 		        
 		     </form>	

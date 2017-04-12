@@ -52,7 +52,35 @@ $(document).ready(function(){
         organization_info.css('display','block');
         bg_window.css('display','block');
 
-    });   
+    }); 
+
+
+    $('#navbar-search').on('keyup', function(event)
+    {
+        $('span')
+        if(this.value !== '')
+            $('#navbar-clear-search').css('visibility','visible');
+        else
+            $('#navbar-clear-search').css('visibility','hidden');
+                //this.after.innerHTML = "<span>x</span>";
+                
+               // $('span').text("x"));    
+        //alert("sdfsf");
+        
+        //console.log(this.value);
+    })
+    $('#navbar-clear-search').on('click', function (event) 
+    {
+        $('#navbar-search').val('');
+        //console.log(event);
+    })
+    $('#search-form').on('submit', function (event) 
+    {
+        //$('#navbar-search').val('');
+        event.preventDefault();
+        console.log(event);
+    })
+
 
 });
 
