@@ -55,7 +55,7 @@ $(document).ready(function(){
     }); 
 
 
-    $('#navbar-search').on('keyup', function(event)
+    $('#navbar-search').on('input', function(event)
     {
         $('span')
         if(this.value !== '')
@@ -78,8 +78,11 @@ $(document).ready(function(){
     {
         //$('#navbar-search').val('');
         event.preventDefault();
-        console.log(event);
+
+        console.log(window.__gcse);
     })
+
+    
 
 
 });

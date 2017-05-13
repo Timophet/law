@@ -74,7 +74,8 @@
 						</div>
 					</div>	
 				</figure>
-	                    
+	            
+
 	    			
 	  		</div>
 		</section>
@@ -115,19 +116,24 @@
 				<li><a href="#">Отзывы</a></li>
 				<li><a href="#">Контакты</a></li>				
 			</ul>
-			<form class="navbar-form navbar-right" id="search-form">
-		        <div class="form-group">
-		          <label>
-		          	<input type="text" class="form-control" placeholder="Поиск" id="navbar-search" name="search-text"> 
-		          	<span class="clear-search-field" id="navbar-clear-search">х</span>		
-		          </label> 
-		        </div>
-		        
-		     </form>	
+			
+			<div class="navbar-form navbar-right" id="search-input">
+				
+				<gcse:search></gcse:search>
+				<!---
+				<form action="" method="GET">
+  					<input class="input" name="q" placeholder="Поиск">
+				</form> ---->	
+			</div>
+		
+		
+
+			
 			
 		</div>
 	</nav>
 
+	
 	
 
 	</header>
@@ -193,10 +199,26 @@
 		  
 		  <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button" id="start-work-button">Начать работу</a></p>
 		</div>
-	
+		
 	</div>
+	<hr>
 	
 	
+
+	<script>
+		(function() {
+		    var cx = '004910772774035141176:ul5hi89yaeq';
+			var gcse = document.createElement('script');
+			gcse.type = 'text/javascript';
+			gcse.async = true;
+			gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(gcse, s);
+		})();
+	</script>
+				
+	
+
 	<script src="js/validation.js"></script>
 	<script src="js/main.js"></script>
 

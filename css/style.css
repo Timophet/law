@@ -267,10 +267,8 @@
 
 .clear-search-field
 {
-	//display: none;
 	visibility: hidden;
 	cursor: pointer;
-	//font:27px arial, sans-serif;
 	font-style: normal;
     font-variant-ligatures: normal;
     font-variant-caps: normal;
@@ -278,9 +276,17 @@
     font-weight: normal;
     font-stretch: normal;
     font-size: 27px;
-    line-height: 13px;
+   // line-height: 1;
     font-family: arial, sans-serif;
 	color: white;
+	vertical-align:middle;
+}
+
+#search-input .gsc-search-button
+{
+	display: none!important;
+	//width: 200px!important;
+
 }
 
 
