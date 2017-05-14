@@ -251,6 +251,7 @@
 	margin-bottom: 0;	
 }
 
+
 .navbar-main-page
 {
 	position: relative;
@@ -282,6 +283,15 @@
 	vertical-align:middle;
 }
 
+#search-input
+{
+	height: 30px;
+	margin-top: 11px;
+	//padding: 0;
+	width:20%;
+	//vertical-align:middle;
+	//line-height: 1;
+}
 #search-input .gsc-search-button
 {
 	display: none!important;
@@ -289,7 +299,37 @@
 
 }
 
+#search-input .gsc-control-cse
+{
+	padding: 0;
+	border: none;
+}
 
+
+#search-input .gsc-search-box
+{
+	margin: 0;
+}
+
+
+#search-input .gsc-input-box
+{
+		border: none;
+		
+		height:30px;
+		
+}
+
+#search-input .gsib_a, #search-input .gsc-input
+{
+	vertical-align: middle;
+	padding-right: 0;
+}
+
+#search-input #gsc-i-id1
+{
+	border-radius: 4px;
+}
 /*-------------------------------logged.php ---------------- */
 
 

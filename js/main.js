@@ -1,13 +1,15 @@
 
 $(document).ready(function(){   
 
-    var height = $(document).height();
-    console.log(height); 
+   
+	
+	var height = $(document).height();
+    //console.log(height); 
     
     var card = $('#card');
     var card_container = $('#card-container');
     var bg_window = $('#bg-window');
-    console.log(card);
+    //console.log(card);
 
     $('#navbar-link-login').on('click', function() 
     {
@@ -53,9 +55,9 @@ $(document).ready(function(){
         bg_window.css('display','block');
 
     }); 
-
-
-    $('#navbar-search').on('input', function(event)
+	
+	/*
+    $('#gsc-i-id1').on('input', function(event)
     {
         $('span')
         if(this.value !== '')
@@ -81,7 +83,7 @@ $(document).ready(function(){
 
         console.log(window.__gcse);
     })
-
+	*/
     
 
 
